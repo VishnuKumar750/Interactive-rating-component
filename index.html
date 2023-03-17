@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.css">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Rating state start -->
+
+  <main>
+
+    <section>
+      <div class="card-1">
+      <div class="icon-star-image">
+        <img class="icon-star" src="images/icon-star.svg" alt="icon_star"/>
+      </div>
+      <div class="heading-div">
+        <h1 class="heading">How did we do?</h1>
+      </div>
+      <div class="para-div">
+        <p class="paragraph">Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!</p>
+      </div>
+      <div class="rating-item">
+        <div class="rating ">1</div>
+        <div class="rating ">2</div>
+        <div class="rating ">3</div>
+        <div class="rating ">4</div>
+        <div class="rating ">5</div>
+      </div>
+      <div class="button-div">
+        <button class="button-submit">Submit</button>
+      </div>
+    </div>
+    <div class="card-2">
+      <div class="thank-you-image">
+        <img class="thank-image" src="images/illustration-thank-you.svg" alt="thank-you"/>
+      </div>
+
+      <div class="thank-you-selected">
+        <p class="selected-out">You selected <span class="selected-count">4</span> out of 5</p>
+      </div>
+
+      <div class="thank-you-heading-div">
+        <h1 class="thank-you-heading">Thank you!</h1>
+      </div>
+      <div class="thank-you-para-div">
+        <p class="thank-you-para">We appreciate you taking the time to give a rating. If you ever need more support, 
+          don’t hesitate to get in touch!</p>
+      </div>
+    </div>
+    </section>
+
+  </main>
+ 
+
+  <script>
+    const submit = document.querySelector('.button-div');
+    const count = document.querySelector('.selected-count');
+    const card_2 = document.querySelector('.card-2');
+
+    const ratingItem = document.querySelector('.rating-item').children
+
+    var ratedValue = 1;
+
+    for(let i = 0; i <= ratingItem.length - 1; i++) {
+      ratingItem[i].addEventListener('click', () => {
+        for(let j = 0; j <= ratingItem.length - 1; j++) {
+          ratingItem[j].classList.remove('active');
+        }
+          ratingItem[i].classList.toggle('active');
+          ratedValue = ratingItem[i].innerHTML;
+      })
+    }    
+
+
+
+    
+    // ratingItem.forEach((rating) => {
+      //   rating.addEventListener('click', () =>  {
+    //     console.log('clicked');
+    //   })
+    // })
+
+    submit.addEventListener('click', () => {
+      card_2.style.display = 'block';
+      count.innerHTML = ratedValue
+    })
+
+  </script>
+</body>
+</html>

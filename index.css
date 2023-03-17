@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+   --White: hsl(0, 0%, 100%);
+   --LG: hsl(217, 12%, 63%);
+   --MG: hsl(216, 12%, 54%);
+   --DB: hsl(213, 19%, 18%);
+   --VDB: hsl(216, 12%, 8%);
+   --Orange: hsl(25, 97%, 53%);
+   --MGA:hsla(216, 12%, 54%, 0.2);
+
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: 'Overpass', sans-serif;
+   background: var(--VDB);
+   overflow: hidden;
+}
+
+main {
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+section {
+   background: hsl(213, 19%, 18%);
+   margin: auto auto;
+   width: 20em;
+   height: 24em;
+   border-radius: 1em;
+   position: relative;
+}
+
+.card-1 {
+   width: 100%;
+   height: 23em;
+}
+
+.icon-star-image {
+   position: relative;
+   top: 2em;
+   left: 1.2em;
+   width: 1.5em;
+   height: 1.5em;
+   background: hsl(216, 12%, 54%, 0.2);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   padding: 0.5em;
+}
+
+.icon-star {
+   width: 1em;
+   height: 1em;
+}
+
+.heading-div {
+   margin-left: 0.2em;
+   margin-top: 3.5em;
+}
+
+.heading {
+   color: var(--White);
+   font-size: 1.2rem;
+   margin: .9em;
+   font-weight: 700;
+}
+
+.paragraph {
+   line-height: 1.2rem;
+   margin-left: 1.5em;
+   color: var(--LG);
+   font-size: 0.8rem;
+   width: 21em;
+   font-weight: 400;
+}
+
+.rating-item {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 18em;
+   margin: auto auto;
+   margin-top: 1.5em;
+}
+
+.rating {
+   width: 2em;
+   height: 2em;
+   background: hsl(216, 12%, 54%, 0.2);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   padding: 0.25em;
+   color: var(--LG);
+   font-weight: 700;
+   cursor: pointer;
+}
+
+.active {
+   width: 2em;
+   height: 2em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   padding: 0.25em;
+   font-weight: 700;
+   cursor: pointer;
+   color: var(--White);
+   background: hsla(216, 12%, 54%, 0.7);
+}
+
+.rating:hover {
+   color: var(--White);
+   background: var(--Orange);
+}
+
+.button-submit {
+   outline: none;
+   text-transform: uppercase;
+   letter-spacing: 0.2em;
+   width: 18em;
+   padding: 1em;
+   margin-left: 1em;
+   border-radius: 2em;
+   margin-top: 2em;
+   border: none;
+   font-size: 1rem;
+   color: var(--White);
+   font-weight: 700;
+   background: var(--Orange);
+   cursor: pointer;
+}
+
+.button-submit:hover {
+   color: var(--Orange);
+   background: var(--White);
+}
+
+.card-2 {
+   width: 100%;
+   height: 23em;
+   background: var(--DB);
+   border-radius: 1em;
+   position: absolute;
+   top:0;
+   display: none;
+}
+
+.thank-you-image {
+   width: 100%;
+   height: 10em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.thank-you-selected {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.selected-out {
+   border-radius: 2em;
+   padding: 0.8em;
+   font-size: 0.8rem;
+   background: var(--MGA);
+   font-weight: 700;
+   color: hsl(25, 97%, 53%, 0.8);
+}
+
+.thank-you-heading-div {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-top: 2em;
+   padding-bottom: 1.5em;
+   color: var(--White);
+   font-weight: 700;
+}
+
+.thank-you-para-div {
+   width: 100%;
+   /* border: 2px solid yellow; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.thank-you-para {
+   line-height: 1.5rem;
+   width: 22em;
+   text-align: center;
+   font-size: 0.9rem;
+   color: var(--MG);
+}
+
+@media only screen and (min-width:768px) {
+   section {
+      background: hsl(213, 19%, 18%);
+      margin: auto auto;
+      width: 20em;
+      height: 24em;
+      border-radius: 1em;
+      position: relative;
+   }
+
+}
+
+@media  screen and (min-width:1024px) {
+   section {
+      background: hsl(213, 19%, 18%);
+      margin: auto auto;
+      width: 27em;
+      height: 26em;
+      border-radius: 1em;
+      position: relative;
+   }
+
+   .icon-star-image {
+      position: relative;
+      top: 2em;
+      left: 1.5em;
+      width: 1.5em;
+      height: 1.5em;
+      background: hsl(216, 12%, 54%, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      padding: 0.5em;
+   }
+   
+   .icon-star {
+      width: 1em;
+      height: 1em;
+   }
+   
+   .heading-div {
+      margin-left: 0.2em;
+      margin-top: 3.5em;
+   }
+   
+   .heading {
+      color: var(--White);
+      font-size: 1.8rem;
+      margin: .9em;
+      font-weight: 700;
+   }
+   
+   .paragraph {
+      line-height: 1.5rem;
+      margin-left: 1.8em;
+      color: var(--LG);
+      font-size: 1rem;
+      width: 22em;
+      font-weight: 400;
+   }
+   
+   .rating-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 23em;
+      margin: auto auto;
+      margin-top: 1.5em;
+   }
+   
+   .rating {
+      width: 3em;
+      height: 3em;
+      background: hsl(216, 12%, 54%, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      padding: 0.25em;
+      color: var(--LG);
+      font-weight: 700;
+      cursor: pointer;
+   }
+   
+   .active {
+      width: 3em;
+      height: 3em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      padding: 0.25em;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--White);
+      background: hsla(216, 12%, 54%, 0.7);
+   }
+   
+   .rating:hover {
+      color: var(--White);
+      background: var(--Orange);
+   }
+   
+   .button-submit {
+      outline: none;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      width: 23em;
+      padding: 1em;
+      margin-left: 2em;
+      border-radius: 2em;
+      margin-top: 2em;
+      border: none;
+      font-size: 1rem;
+      color: var(--White);
+      font-weight: 700;
+      background: var(--Orange);
+      cursor: pointer;
+   }
+   
+   .button-submit:hover {
+      color: var(--Orange);
+      background: var(--White);
+   }
+   
+   .card-2 {
+      width: 100%;
+      height: 25em;
+      background: var(--DB);
+      border-radius: 1em;
+      position: absolute;
+      top:0;
+      display: none;
+   }
+   
+   .thank-you-image {
+      width: 100%;
+      height: 10em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1em;
+   }
+   
+   .thank-you-selected {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+   }
+   
+   .selected-out {
+      margin-top: 0.5em;
+      border-radius: 1.8em;
+      padding: 0.7em;
+      width: 14em;
+      font-size: 0.9rem;
+      background: var(--MGA);
+      font-weight: 700;
+      color: hsl(25, 97%, 53%, 0.8);
+   }
+   
+   .thank-you-heading-div {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 2em;
+      padding-bottom: 1.5em;
+      color: var(--White);
+      font-weight: 700;
+   }
+   
+   .thank-you-heading {
+      font-size: 1.9rem;
+   }
+
+   .thank-you-para-div {
+      width: 100%;
+      /* border: 2px solid yellow; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   
+   .thank-you-para {
+      line-height: 1.5rem;
+      width: 23em;
+      text-align: center;
+      font-size: 1rem;
+      color: var(--MG);
+   }
+}
